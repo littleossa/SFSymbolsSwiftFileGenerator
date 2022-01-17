@@ -9,20 +9,36 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         let sfsymbolsNnumCases = createSFSymbolsNnumCases(version: "3_2")
-        let sfSymbolsFile: String = "import Foundation\n\nenum SFSymbol: String, CaseIterable {\n\n%@}"
+        let sfSymbolsFile: String = """
+import Foundation
+
+enum SFSymbol: String, CaseIterable {
+
+%@
+}
+
+extension UIImage {
+
+convenience init?(symbol: SFSymbol) {
+self.init(systemName: symbol.rawValue)
+}
+
+convenience init?(symbol: SFSymbol, with configuration: UIImage.Configuration?) {
+self.init(systemName: symbol.rawValue, withConfiguration: configuration)
+}
+}
+"""
         
         var contents: String = ""
         for sfsymbolsNnumCase in sfsymbolsNnumCases {
             contents += sfsymbolsNnumCase + "\n"
         }
-        let file = String(format: sfSymbolsFile, contents)
-        print(file)
+        let sfSymbolsFileWithBody = String(format: sfSymbolsFile, contents)
+        exportSwiftFile(withText: sfSymbolsFileWithBody)
     }
     
     private func createSFSymbolsNnumCases(version: String) -> [String] {
@@ -37,6 +53,17 @@ class ViewController: UIViewController {
             return "case \(String(symbolName).lowerCamelCase()) = \"\(String(symbolName))\""
         }
     }
+    
+    private func exportSwiftFile(withText text: String) {
+        let path = NSHomeDirectory() + "/Documents/SFSymbols.swift"
+        do {
+            try text.write(toFile: path, atomically: true, encoding : String.Encoding.utf8)
+            print("Success to save:\n open \(path)")
+            
+        } catch let error as NSError {
+            print("Fail to save: \(error)" )
+        }
+    }
 }
 
 extension String {
@@ -49,14 +76,12 @@ extension String {
                 optimalString = separatedCharacters[i]
                 continue
             }
-            
             optimalString += separatedCharacters[i].capitalizeFirstLetter()
         }
         return optimalString
     }
     
     private func capitalizeFirstLetter() -> String {
-        
         return self.prefix(1).uppercased() + self.dropFirst()
     }
 }
