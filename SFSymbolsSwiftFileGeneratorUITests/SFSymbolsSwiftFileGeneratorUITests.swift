@@ -1,6 +1,6 @@
 //
-//  SFSymbolsTxtFileGeneratorUITests.swift
-//  SFSymbolsTxtFileGeneratorUITests
+//  SFSymbolsSwiftFileGeneratorUITests.swift
+//  SFSymbolsSwiftFileGeneratorUITests
 //
 //  Created by 平岡修 on 2022/01/16.
 //

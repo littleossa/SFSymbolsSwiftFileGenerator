@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  SFSymbolsTxtFileGenerator
+//  SFSymbolsSwiftFileGenerator
 //
 //  Created by 平岡修 on 2022/01/16.
 //
