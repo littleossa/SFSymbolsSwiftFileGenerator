@@ -46,12 +46,7 @@ self.init(systemName: symbol.rawValue, withConfiguration: configuration)
               let fileContents = try? String(contentsOf: fileURL) else {
                   fatalError("fail to generate")
               }
-        return fileContents.split(separator: "\n").compactMap { symbolName in
-            
-            if symbolName.isEmpty { return nil }
-            
-            return "case \(String(symbolName).lowerCamelCase()) = \"\(String(symbolName))\""
-        }
+        return fileContents.splitIntoEnumCases()
     }
     
     private func exportSwiftFile(withText text: String) {
@@ -79,6 +74,30 @@ extension String {
             optimalString += separatedCharacters[i].capitalizeFirstLetter()
         }
         return optimalString
+    }
+    
+    func splitIntoEnumCases() -> [String] {
+        return self.split(separator: "\n").compactMap { symbolName in
+            
+            if symbolName.isEmpty { return nil }
+            
+            var enumCaseName = String(symbolName).lowerCamelCase()
+            
+            switch enumCaseName {
+            case "case":
+                enumCaseName = "`case`"
+            case "return":
+                enumCaseName = "`return`"
+            case "repeat":
+                enumCaseName = "`repeat`"
+            default:
+                if Int(enumCaseName.prefix(1)) != nil {
+                    enumCaseName = "number" + enumCaseName
+                }
+            }
+            
+            return "case \(enumCaseName) = \"\(String(symbolName))\""
+        }
     }
     
     private func capitalizeFirstLetter() -> String {
