@@ -9,12 +9,8 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        let sfsymbolsEnumCases = createSFSymbolsEnumCasesfromTxtFile()
-        let sfSymbolsFile: String = """
-import Foundation
+    let basicSFSymbolsFileContents: String = """
+import UIKit
 
 enum SFSymbol: String, CaseIterable {
 
@@ -32,12 +28,17 @@ self.init(systemName: symbol.rawValue, withConfiguration: configuration)
 }
 }
 """
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        let sfsymbolsEnumCases = createSFSymbolsEnumCasesfromTxtFile()
         
         var contents: String = ""
         for sfsymbolsEnumCase in sfsymbolsEnumCases {
             contents += sfsymbolsEnumCase + "\n"
         }
-        let sfSymbolsFileWithBody = String(format: sfSymbolsFile, contents)
+        let sfSymbolsFileWithBody = String(format: basicSFSymbolsFileContents, contents)
         exportSwiftFile(withText: sfSymbolsFileWithBody)
     }
     
