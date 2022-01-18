@@ -36,14 +36,14 @@ self.init(systemName: symbol.rawValue, withConfiguration: configuration)
     }
     
     private func exportSFSymbolsSwiftFileFromSymbolNamesTxtFile() {
-        let sfsymbolsEnumCases = createSFSymbolsEnumCasesfromTxtFile()
+        let symbolsEnumCases = createSFSymbolsEnumCasesfromTxtFile()
         
         var contents: String = ""
-        for sfsymbolsEnumCase in sfsymbolsEnumCases {
-            contents += sfsymbolsEnumCase + "\n"
+        for symbolsEnumCase in symbolsEnumCases {
+            contents += symbolsEnumCase + "\n"
         }
-        let sfSymbolsFileWithBody = String(format: basicSFSymbolsFileContents, contents)
-        exportSwiftFile(withText: sfSymbolsFileWithBody)
+        let completedSFSymbolsFileContents = String(format: basicSFSymbolsFileContents, contents)
+        exportSwiftFile(withText: completedSFSymbolsFileContents)
     }
     
     private func createSFSymbolsEnumCasesfromTxtFile() -> [String] {
