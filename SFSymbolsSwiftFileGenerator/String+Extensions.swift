@@ -5,7 +5,7 @@
 //  Created by 平岡修 on 2022/01/18.
 //
 
-import Foundation
+import UIKit
 
 extension String {
     
@@ -30,7 +30,12 @@ extension String {
                 }
             }
             
-            return "case \(enumCaseName) = \"\(String(symbolName))\""
+            let enumCase = "case \(enumCaseName) = \"\(String(symbolName))\""
+            if UIImage(systemName: String(symbolName)) == nil {
+                return "/* iOS\(UIDevice.current.systemVersion)では利用できません\n\(enumCase) */"
+            }
+            
+            return enumCase
         }
     }
     
