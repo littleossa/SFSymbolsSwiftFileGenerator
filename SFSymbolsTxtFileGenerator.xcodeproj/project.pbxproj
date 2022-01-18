@@ -10,7 +10,7 @@
 		97B7FBFF27945053002A3083 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B7FBFE27945053002A3083 /* AppDelegate.swift */; };
 		97B7FC0127945053002A3083 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B7FC0027945053002A3083 /* SceneDelegate.swift */; };
 		97B7FC0327945053002A3083 /* GeneratorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B7FC0227945053002A3083 /* GeneratorViewController.swift */; };
-		97B7FC0627945053002A3083 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97B7FC0427945053002A3083 /* Main.storyboard */; };
+		97B7FC0627945053002A3083 /* Generator.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97B7FC0427945053002A3083 /* Generator.storyboard */; };
 		97B7FC0827945054002A3083 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97B7FC0727945054002A3083 /* Assets.xcassets */; };
 		97B7FC0B27945054002A3083 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97B7FC0927945054002A3083 /* LaunchScreen.storyboard */; };
 		97B7FC1627945054002A3083 /* SFSymbolsTxtFileGeneratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B7FC1527945054002A3083 /* SFSymbolsTxtFileGeneratorTests.swift */; };
@@ -42,7 +42,7 @@
 		97B7FBFE27945053002A3083 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		97B7FC0027945053002A3083 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		97B7FC0227945053002A3083 /* GeneratorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneratorViewController.swift; sourceTree = "<group>"; };
-		97B7FC0527945053002A3083 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		97B7FC0527945053002A3083 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Generator.storyboard; sourceTree = "<group>"; };
 		97B7FC0727945054002A3083 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		97B7FC0A27945054002A3083 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		97B7FC0C27945054002A3083 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -107,7 +107,7 @@
 				97B7FC0027945053002A3083 /* SceneDelegate.swift */,
 				97B7FC0227945053002A3083 /* GeneratorViewController.swift */,
 				97B7FC322796ED13002A3083 /* String+Extensions.swift */,
-				97B7FC0427945053002A3083 /* Main.storyboard */,
+				97B7FC0427945053002A3083 /* Generator.storyboard */,
 				97B7FC342796EEE6002A3083 /* SFSymbols.txt */,
 				97B7FC0727945054002A3083 /* Assets.xcassets */,
 				97B7FC0927945054002A3083 /* LaunchScreen.storyboard */,
@@ -240,7 +240,7 @@
 				97B7FC0B27945054002A3083 /* LaunchScreen.storyboard in Resources */,
 				97B7FC352796EEE6002A3083 /* SFSymbols.txt in Resources */,
 				97B7FC0827945054002A3083 /* Assets.xcassets in Resources */,
-				97B7FC0627945053002A3083 /* Main.storyboard in Resources */,
+				97B7FC0627945053002A3083 /* Generator.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,12 +305,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		97B7FC0427945053002A3083 /* Main.storyboard */ = {
+		97B7FC0427945053002A3083 /* Generator.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				97B7FC0527945053002A3083 /* Base */,
 			);
-			name = Main.storyboard;
+			name = Generator.storyboard;
 			sourceTree = "<group>";
 		};
 		97B7FC0927945054002A3083 /* LaunchScreen.storyboard */ = {
@@ -452,7 +452,7 @@
 				INFOPLIST_FILE = SFSymbolsTxtFileGenerator/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = Generator;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -480,7 +480,7 @@
 				INFOPLIST_FILE = SFSymbolsTxtFileGenerator/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = Generator;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
