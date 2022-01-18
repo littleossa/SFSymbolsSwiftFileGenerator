@@ -12,7 +12,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let sfsymbolsNnumCases = createSFSymbolsNnumCases(version: "3_2")
+        let sfsymbolsNnumCases = createSFSymbolsNnumCasesfromTxtFile()
         let sfSymbolsFile: String = """
 import Foundation
 
@@ -41,8 +41,8 @@ self.init(systemName: symbol.rawValue, withConfiguration: configuration)
         exportSwiftFile(withText: sfSymbolsFileWithBody)
     }
     
-    private func createSFSymbolsNnumCases(version: String) -> [String] {
-        guard let fileURL = Bundle.main.url(forResource: "SFSymbols" + version, withExtension: "txt"),
+    private func createSFSymbolsNnumCasesfromTxtFile() -> [String] {
+        guard let fileURL = Bundle.main.url(forResource: "SFSymbols", withExtension: "txt"),
               let fileContents = try? String(contentsOf: fileURL) else {
                   fatalError("fail to generate")
               }
