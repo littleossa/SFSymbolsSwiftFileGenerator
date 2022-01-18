@@ -16,8 +16,8 @@
 		97B7FC1627945054002A3083 /* SFSymbolsTxtFileGeneratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B7FC1527945054002A3083 /* SFSymbolsTxtFileGeneratorTests.swift */; };
 		97B7FC2027945054002A3083 /* SFSymbolsTxtFileGeneratorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B7FC1F27945054002A3083 /* SFSymbolsTxtFileGeneratorUITests.swift */; };
 		97B7FC2227945054002A3083 /* SFSymbolsTxtFileGeneratorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B7FC2127945054002A3083 /* SFSymbolsTxtFileGeneratorUITestsLaunchTests.swift */; };
-		97B7FC2F2794517F002A3083 /* SFSymbols3_2.txt in Resources */ = {isa = PBXBuildFile; fileRef = 97B7FC2E2794517F002A3083 /* SFSymbols3_2.txt */; };
 		97B7FC332796ED13002A3083 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B7FC322796ED13002A3083 /* String+Extensions.swift */; };
+		97B7FC352796EEE6002A3083 /* SFSymbols.txt in Resources */ = {isa = PBXBuildFile; fileRef = 97B7FC342796EEE6002A3083 /* SFSymbols.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,8 +51,8 @@
 		97B7FC1B27945054002A3083 /* SFSymbolsTxtFileGeneratorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SFSymbolsTxtFileGeneratorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		97B7FC1F27945054002A3083 /* SFSymbolsTxtFileGeneratorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFSymbolsTxtFileGeneratorUITests.swift; sourceTree = "<group>"; };
 		97B7FC2127945054002A3083 /* SFSymbolsTxtFileGeneratorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFSymbolsTxtFileGeneratorUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		97B7FC2E2794517F002A3083 /* SFSymbols3_2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SFSymbols3_2.txt; sourceTree = "<group>"; };
 		97B7FC322796ED13002A3083 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		97B7FC342796EEE6002A3083 /* SFSymbols.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SFSymbols.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,8 +108,8 @@
 				97B7FC0227945053002A3083 /* ViewController.swift */,
 				97B7FC322796ED13002A3083 /* String+Extensions.swift */,
 				97B7FC0427945053002A3083 /* Main.storyboard */,
+				97B7FC342796EEE6002A3083 /* SFSymbols.txt */,
 				97B7FC0727945054002A3083 /* Assets.xcassets */,
-				97B7FC2E2794517F002A3083 /* SFSymbols3_2.txt */,
 				97B7FC0927945054002A3083 /* LaunchScreen.storyboard */,
 				97B7FC0C27945054002A3083 /* Info.plist */,
 			);
@@ -237,8 +237,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				97B7FC2F2794517F002A3083 /* SFSymbols3_2.txt in Resources */,
 				97B7FC0B27945054002A3083 /* LaunchScreen.storyboard in Resources */,
+				97B7FC352796EEE6002A3083 /* SFSymbols.txt in Resources */,
 				97B7FC0827945054002A3083 /* Assets.xcassets in Resources */,
 				97B7FC0627945053002A3083 /* Main.storyboard in Resources */,
 			);
