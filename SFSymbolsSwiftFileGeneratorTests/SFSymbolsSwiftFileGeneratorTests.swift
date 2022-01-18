@@ -6,9 +6,9 @@
 //
 
 import XCTest
-@testable import SFSymbolsTxtFileGenerator
+@testable import SFSymbolsSwiftFileGenerator
 
-class SFSymbolsTxtFileGeneratorTests: XCTestCase {
+class SFSymbolsSwiftFileGeneratorTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.

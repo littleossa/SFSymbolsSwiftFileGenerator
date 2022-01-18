@@ -7,7 +7,7 @@
 
 import XCTest
 
-class SFSymbolsTxtFileGeneratorUITestsLaunchTests: XCTestCase {
+class SFSymbolsSwiftFileGeneratorUITestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true
