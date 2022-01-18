@@ -43,7 +43,7 @@ self.init(systemName: symbol.rawValue, withConfiguration: configuration)
             contents += symbolsEnumCase + "\n"
         }
         let completedSFSymbolsFileContents = String(format: basicSFSymbolsFileContents, contents)
-        exportSwiftFile(withText: completedSFSymbolsFileContents)
+        exportSwiftFile(contents: completedSFSymbolsFileContents)
     }
     
     private func createSFSymbolsEnumCasesfromTxtFile() -> [String] {
@@ -54,10 +54,10 @@ self.init(systemName: symbol.rawValue, withConfiguration: configuration)
         return fileContents.splitIntoEnumCases()
     }
     
-    private func exportSwiftFile(withText text: String) {
+    private func exportSwiftFile(contents: String) {
         let path = NSHomeDirectory() + "/Documents/SFSymbols.swift"
         do {
-            try text.write(toFile: path, atomically: true, encoding : String.Encoding.utf8)
+            try contents.write(toFile: path, atomically: true, encoding : String.Encoding.utf8)
             print("Success to save:\n open \(path)")
             
         } catch let error as NSError {
