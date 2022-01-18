@@ -24,8 +24,9 @@ extension String {
             case "repeat":
                 enumCaseName = "`repeat`"
             default:
-                if Int(enumCaseName.prefix(1)) != nil {
-                    enumCaseName = "number" + enumCaseName
+                if let initialIsNumber = enumCaseName.first?.isNumber,
+                   initialIsNumber {
+                    enumCaseName = "_" + enumCaseName
                 }
             }
             
