@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		97B7FBFF27945053002A3083 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B7FBFE27945053002A3083 /* AppDelegate.swift */; };
 		97B7FC0127945053002A3083 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B7FC0027945053002A3083 /* SceneDelegate.swift */; };
-		97B7FC0327945053002A3083 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B7FC0227945053002A3083 /* ViewController.swift */; };
+		97B7FC0327945053002A3083 /* GeneratorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B7FC0227945053002A3083 /* GeneratorViewController.swift */; };
 		97B7FC0627945053002A3083 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97B7FC0427945053002A3083 /* Main.storyboard */; };
 		97B7FC0827945054002A3083 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97B7FC0727945054002A3083 /* Assets.xcassets */; };
 		97B7FC0B27945054002A3083 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97B7FC0927945054002A3083 /* LaunchScreen.storyboard */; };
@@ -41,7 +41,7 @@
 		97B7FBFB27945053002A3083 /* SFSymbolsTxtFileGenerator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SFSymbolsTxtFileGenerator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		97B7FBFE27945053002A3083 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		97B7FC0027945053002A3083 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		97B7FC0227945053002A3083 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		97B7FC0227945053002A3083 /* GeneratorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneratorViewController.swift; sourceTree = "<group>"; };
 		97B7FC0527945053002A3083 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		97B7FC0727945054002A3083 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		97B7FC0A27945054002A3083 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -105,7 +105,7 @@
 			children = (
 				97B7FBFE27945053002A3083 /* AppDelegate.swift */,
 				97B7FC0027945053002A3083 /* SceneDelegate.swift */,
-				97B7FC0227945053002A3083 /* ViewController.swift */,
+				97B7FC0227945053002A3083 /* GeneratorViewController.swift */,
 				97B7FC322796ED13002A3083 /* String+Extensions.swift */,
 				97B7FC0427945053002A3083 /* Main.storyboard */,
 				97B7FC342796EEE6002A3083 /* SFSymbols.txt */,
@@ -266,7 +266,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				97B7FC332796ED13002A3083 /* String+Extensions.swift in Sources */,
-				97B7FC0327945053002A3083 /* ViewController.swift in Sources */,
+				97B7FC0327945053002A3083 /* GeneratorViewController.swift in Sources */,
 				97B7FBFF27945053002A3083 /* AppDelegate.swift in Sources */,
 				97B7FC0127945053002A3083 /* SceneDelegate.swift in Sources */,
 			);

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class GeneratorViewController: UIViewController {
     
     let basicSFSymbolsFileContents: String = """
 import UIKit
