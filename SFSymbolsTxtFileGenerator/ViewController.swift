@@ -32,6 +32,10 @@ self.init(systemName: symbol.rawValue, withConfiguration: configuration)
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        exportSFSymbolsSwiftFileFromSymbolNamesTxtFile()
+    }
+    
+    private func exportSFSymbolsSwiftFileFromSymbolNamesTxtFile() {
         let sfsymbolsEnumCases = createSFSymbolsEnumCasesfromTxtFile()
         
         var contents: String = ""
