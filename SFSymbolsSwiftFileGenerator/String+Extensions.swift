@@ -47,13 +47,9 @@ extension String {
                 optimalString = separatedCharacters[i]
                 continue
             }
-            optimalString += separatedCharacters[i].capitalizeFirstLetter()
+            optimalString += separatedCharacters[i].capitalized
         }
         return optimalString
-    }
-    
-    private func capitalizeFirstLetter() -> String {
-        return self.prefix(1).uppercased() + self.dropFirst()
     }
 }
 
