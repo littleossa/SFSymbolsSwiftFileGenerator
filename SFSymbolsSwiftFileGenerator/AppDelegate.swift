@@ -2,8 +2,9 @@
 //  AppDelegate.swift
 //  SFSymbolsSwiftFileGenerator
 //
-//  Created by 平岡修 on 2022/01/16.
+//  Created by littleossa on 2022/01/16.
 //
+//  enjoy!
 
 import UIKit
 

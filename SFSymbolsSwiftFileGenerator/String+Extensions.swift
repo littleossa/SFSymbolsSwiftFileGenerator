@@ -2,8 +2,9 @@
 //  String+Extensions.swift
 //  SFSymbolsSwiftFileGenerator
 //
-//  Created by 平岡修 on 2022/01/18.
+//  Created by littleossa on 2022/01/18.
 //
+//  enjoy!
 
 import UIKit
 
