@@ -33,10 +33,10 @@ self.init(systemName: symbol.rawValue, withConfiguration: configuration)
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        exportSFSymbolsSwiftFileFromSymbolNamesTxtFile()
+        exportSFSymbolsSwiftFile()
     }
     
-    private func exportSFSymbolsSwiftFileFromSymbolNamesTxtFile() {
+    private func exportSFSymbolsSwiftFile() {
         let symbolsEnumCases = createSFSymbolsEnumCasesfromTxtFile()
         
         var contents: String = ""
@@ -49,7 +49,7 @@ self.init(systemName: symbol.rawValue, withConfiguration: configuration)
     
     private func createSFSymbolsEnumCasesfromTxtFile() -> [String] {
         guard let fileURL = Bundle.main.url(forResource: "SFSymbols", withExtension: "txt"),
-              let fileContents = try? String(contentsOf: fileURL) else {
+              let fileContents = try? String(contentsOf: fileURL, encoding: .utf8) else {
                   fatalError("fail to generate")
               }
         return fileContents.splitIntoEnumCases()
@@ -58,7 +58,7 @@ self.init(systemName: symbol.rawValue, withConfiguration: configuration)
     private func exportSwiftFile(contents: String) {
         let path = NSHomeDirectory() + "/Documents/SFSymbols.swift"
         do {
-            try contents.write(toFile: path, atomically: true, encoding : String.Encoding.utf8)
+            try contents.write(toFile: path, atomically: true, encoding : .utf8)
             print("Success to save:\n open \(path)")
             
         } catch let error as NSError {
