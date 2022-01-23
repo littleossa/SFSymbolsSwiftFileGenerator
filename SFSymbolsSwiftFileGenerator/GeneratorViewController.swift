@@ -52,7 +52,7 @@ self.init(systemName: symbol.rawValue, withConfiguration: configuration)
     private func createSFSymbolsEnumCasesfromTxtFile() -> [String] {
         guard let fileURL = Bundle.main.url(forResource: "SFSymbols", withExtension: "txt"),
               let fileContents = try? String(contentsOf: fileURL, encoding: .utf8) else {
-                  fatalError("fail to generate")
+                  fatalError("Failure to generate")
               }
         return fileContents.splitIntoEnumCases()
     }
@@ -66,7 +66,7 @@ self.init(systemName: symbol.rawValue, withConfiguration: configuration)
             
         } catch let error as NSError {
             resultImageView.setImage(byResult: .failure)
-            print("Fail to save: \(error)" )
+            print("Failure to save: \(error)" )
         }
     }
 }
