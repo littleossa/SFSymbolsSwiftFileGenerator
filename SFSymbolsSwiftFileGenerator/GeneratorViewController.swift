@@ -61,11 +61,11 @@ self.init(systemName: symbol.rawValue, withConfiguration: configuration)
         let path = NSHomeDirectory() + "/Documents/SFSymbols.swift"
         do {
             try contents.write(toFile: path, atomically: true, encoding : .utf8)
-            resultImageView.image = UIImage(systemName: "checkmark.circle.fill")
+            resultImageView.setImage(byResult: .success)
             print("Success to save:\n open \(path)")
             
         } catch let error as NSError {
-            resultImageView.image = UIImage(systemName: "exclamationmark.triangle.fill")
+            resultImageView.setImage(byResult: .failure)
             print("Fail to save: \(error)" )
         }
     }
