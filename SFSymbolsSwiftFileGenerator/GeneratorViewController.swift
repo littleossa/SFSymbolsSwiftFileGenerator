@@ -10,6 +10,8 @@ import UIKit
 
 class GeneratorViewController: UIViewController {
     
+    @IBOutlet private weak var resultImageView: UIImageView!
+    
     let basicSFSymbolsFileContents: String = """
 import UIKit
 
