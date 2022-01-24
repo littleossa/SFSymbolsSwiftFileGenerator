@@ -62,11 +62,11 @@ self.init(systemName: symbol.rawValue, withConfiguration: configuration)
         do {
             try contents.write(toFile: path, atomically: true, encoding : .utf8)
             resultImageView.setImage(byResult: .success)
-            print("Success to save:\n open \(path)")
+            print("Success to write:\n open \(path)")
             
         } catch let error as NSError {
             resultImageView.setImage(byResult: .failure)
-            print("Failure to save: \(error)" )
+            print("Failure to write: \(error)" )
         }
     }
 }
