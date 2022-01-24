@@ -33,7 +33,7 @@ extension String {
             
             let enumCase = "case \(enumCaseName) = \"\(String(symbolName))\""
             if UIImage(systemName: String(symbolName)) == nil {
-                return "/* iOS\(UIDevice.current.systemVersion)では利用できません\n\(enumCase) */"
+                return "/* Unavailable to iOS \(UIDevice.current.systemVersion)\n\(enumCase) */"
             }
             
             return enumCase
